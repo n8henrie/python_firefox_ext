@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "hello_firefox",
+  "version": "1.0",
+  "description": "https://n8henrie.com/2023/06/write-a-firefox-extension-in-python",
+  "background": {
+    "scripts": [
+      "runtime/pyodide.js",
+      "hello.js"
+    ]
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://n8henrie.com/*"
+      ],
+      "js": [
+        "runtime/pyodide.js",
+        "hello.js"
+      ]
+    }
+  ]
+}
